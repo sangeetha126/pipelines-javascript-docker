@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: sangeethapipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sangeethapipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: sangeethapipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: sangeethapipelinesjavascriptdocker 
+          image: sanfebcontainerregistry.azurecr.io/sangeethapipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
